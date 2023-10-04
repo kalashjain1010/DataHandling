@@ -38,18 +38,19 @@ for index, row in data.iterrows():
         ans1.append(f"{row['Employee Name']} has worked for 7 consecutive days.")
 
 
-print("a) who has worked for 7 consecutive days.")
-for employee in ans1:
-    print(employee)
+with open('output.txt', "a+") as f:
+    f.write("a) who has worked for 7 consecutive days" + "\n")
+    for employee in ans1:
+        f.write(employee+ "\n")
 
-print("\n")
+    f.write("\n")
 
-print("b) who have less than 10 hours of time between shifts but greater than 1 hour")
-for employee in ans2:
-    print(employee)
+    f.write("b) who have less than 10 hours of time between shifts but greater than 1 hour" + "\n")
+    for employee in ans2:
+        f.write(employee + "\n")
 
-print("\n")
+    f.write("\n")
 
-print("c) Who has worked for more than 14 hours in a single shift")
-for employee in ans3:
-    print(employee)
+    f.write("c) Who has worked for more than 14 hours in a single shift" + "\n")
+    for employee in ans3:
+        f.write(employee + "\n")
