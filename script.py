@@ -18,7 +18,7 @@ ans3 = []
 
 for index, row in data.iterrows():
     if prev_employee == row['Employee Name']:
-        # Calculate the time between the end of the previous shift and the start of the current shift
+      
         time_between_shifts = (row['Time'] - prev_time_out).total_seconds() / 3600
 
         if time_between_shifts < 10 and time_between_shifts > 1:
